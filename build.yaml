@@ -12,15 +12,12 @@
 #     shield: reviung41
 #
 ---
-include:
 
 # Hillside 52
-#   Comment out below if you do not have this board, to save build time
+
+include:
   - board: nice_nano_v2
-    shield: hillside52_left
+    shield: hillside52_left nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: hillside52_right
-  - board: nice_nano_v2
-    shield: hillside52_left nice_view_adapter
-  - board: nice_nano_v2
-    shield: hillside52_right nice_view_adapter
+    shield: hillside52_right nice_view_adapter nice_view
+
