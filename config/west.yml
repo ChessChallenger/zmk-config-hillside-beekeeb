@@ -2,14 +2,17 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    # Add the Nick Coutsos remote for the nice!view drivers
+    - name: ncoutsos
+      url-base: https://github.com/ncoutsos
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    # Add the nice-view module here
+    # Add the nice-view project here
     - name: nice-view
-      remote: zmkfirmware
+      remote: ncoutsos
       revision: main
   self:
     path: config
