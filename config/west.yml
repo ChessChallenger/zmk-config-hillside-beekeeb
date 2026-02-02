@@ -7,6 +7,7 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
+    # Add the nice-view module here
     - name: nice-view
       remote: zmkfirmware
       revision: main
