@@ -1,11 +1,18 @@
+/* Copyright (c) 2021-2022 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ */
+
 &spi1 {
-    /* 1. Tell SPI to use the pre-defined pin maps */
-    pinctrl-0 = <&spi1_default>; // "Active" map (Pins 5, 6, 7)
-    pinctrl-1 = <&spi1_sleep>;   // "Power Save" map
-    
-    /* 2. Give these maps names the system understands */
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
 };
 
-/* This creates the label directly on the node reference */
-nice_view_spi: &spi1 {};
+/ {
+    /* Correct syntax for modern ZMK/Zephyr versions */
+    nice_view_spi: &spi1 {
+        status = "okay";
+    };
+};
