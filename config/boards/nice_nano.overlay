@@ -1,4 +1,3 @@
-/* Top-level hardware reference */
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
@@ -8,8 +7,7 @@
                     <NRF_PSEL(SPIM_MOSI, 0, 6)>,
                     <NRF_PSEL(SPIM_MISO, 0, 7)>;
         };
-    グループ1
-};
+    };
 
     spi1_sleep: spi1_sleep {
         group1 {
@@ -27,6 +25,6 @@
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
-    /* nice!view requires a Chip Select (CS) pin */
+    /* nice!view uses the Pro Micro 1 (D1) pin for Chip Select */
     cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
 };
