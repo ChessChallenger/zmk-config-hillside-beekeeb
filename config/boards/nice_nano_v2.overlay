@@ -1,0 +1,19 @@
+/* Copyright (c) 2021-2022 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/led/led.h>
+
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    mosi-pin = <6>;
+    // Unused pins, needed for SPI def, but not used by the display/ws2812 driver.
+    sck-pin = <5>;
+    miso-pin = <7>;
+};
+
+/ {
+    /* Define the label that the nice_view shield is looking for */
+    nice_view_spi: &spi1 { };
+};
