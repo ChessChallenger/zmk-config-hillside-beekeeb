@@ -1,19 +1,30 @@
-/* Copyright (c) 2021-2022 The ZMK Contributors
- * SPDX-License-Identifier: MIT
- */
-
 #include <dt-bindings/led/led.h>
+
+&pinctrl {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 6)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 7)>;
+        };
+    };
+
+    spi1_sleep: spi1_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 6)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 7)>;
+            low-power-enable;
+        };
+    };
+};
 
 &spi1 {
     compatible = "nordic,nrf-spim";
     status = "okay";
-    mosi-pin = <6>;
-    // Unused pins, needed for SPI def, but not used by the display/ws2812 driver.
-    sck-pin = <5>;
-    miso-pin = <7>;
-};
-
-/ {
-    /* Define the label that the nice_view shield is looking for */
-    nice_view_spi: &spi1 { };
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
+    /* nice!view uses the Pro Micro 1 (D1) pin for Chip Select */
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
 };
