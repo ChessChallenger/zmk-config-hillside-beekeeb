@@ -1,9 +1,10 @@
 &spi1 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    mosi-pin = <6>;
-    sck-pin = <5>;
-    miso-pin = <7>;
+    /* 1. Tell SPI to use the pre-defined pin maps */
+    pinctrl-0 = <&spi1_default>; // "Active" map (Pins 5, 6, 7)
+    pinctrl-1 = <&spi1_sleep>;   // "Power Save" map
+    
+    /* 2. Give these maps names the system understands */
+    pinctrl-names = "default", "sleep";
 };
 
 /* This creates the label directly on the node reference */
