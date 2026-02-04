@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <450>;
+            tapping-term-ms = <600>;
             quick-tap-ms = <175>;                // Repeat tap within 175ms to get the letter
             require-prior-idle-ms = <200>;       // Prevents accidental mods while fast typing
             bindings = <&kp>, <&kp>;
@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <450>;
+            tapping-term-ms = <600>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <200>;
             bindings = <&kp>, <&kp>;
