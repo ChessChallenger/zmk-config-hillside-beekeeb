@@ -34,10 +34,10 @@
  */
 
             bindings = <
-&kp GRAVE   &kp B      &kp L      &kp D     &kp C     &kp V               &kp J    &kp Y       &kp O          &kp U        &kp COMMA       &kp BSPC
-&kp TAB     &kp N      &kp R      &kp T     &kp S     &kp G               &kp P    &kp H       &kp A          &kp E        &kp I           &kp ENTER
-&kp LSHFT   &kp X      &kp Q      &kp M     &kp W     &kp Z               &kp SQT  &kp DELETE  &kp K          &kp F        &kp APOSTROPHE  &kp SEMICOLON  &kp UP    &kp RSHFT
-&kp C_MUTE  &lt 5 ESC  &kp LCTRL  &kp LGUI  &kp LALT  &mt LEFT_ALT SPACE  &mo 2    &lt 3 TAB   &kp BACKSPACE  &lt 4 ENTER  &kp RGUI        &kp LEFT       &kp DOWN  &kp RIGHT
+&kp GRAVE   &kp B           &kp L           &kp D             &kp C               &kp V               &kp J      &kp Y                &kp O              &kp U            &kp COMMA        &kp BSPC
+&kp TAB     &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G               &kp P      &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT A  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &kp ENTER
+&kp LSHFT   &kp X           &kp Q           &kp M             &kp W               &kp Z               &kp SQT    &kp DELETE           &kp K              &kp F            &kp APOSTROPHE   &kp SEMICOLON  &kp UP    &kp RSHFT
+&kp C_MUTE  &lt 5 ESC       &kp LCTRL       &none             &none               &mt LEFT_ALT SPACE  &lt 2 TAB  &lt 3 TAB            &kp BACKSPACE      &lt 4 ENTER      &none            &kp LEFT       &kp DOWN  &kp RIGHT
             >;
         };
 
