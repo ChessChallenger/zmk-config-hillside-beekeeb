@@ -3,5 +3,7 @@ include:
     shield: hillside52_left nice_view
   - board: nice_nano
     shield: hillside52_right nice_view
-  - board: nice_nano
-    shield: settings_reset
+ 
+ # If you need to build hard reset firmware to flash in order to troubleshoot, uncomment below:
+ # - board: nice_nano
+ #   shield: settings_reset
