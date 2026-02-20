@@ -1,9 +1,9 @@
 include:
-  - board: nice_nano
+  - board: nice_nano@2//zmk
     shield: hillside52_left nice_view
-  - board: nice_nano
+  - board: nice_nano@2//zmk
     shield: hillside52_right nice_view
  
  # If you need to build hard reset firmware to flash in order to troubleshoot, uncomment below:
- # - board: nice_nano
+ # - board: nice_nano@2//zmk
  #   shield: settings_reset
