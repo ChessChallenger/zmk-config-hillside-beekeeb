@@ -71,10 +71,10 @@
  */
 
             bindings = <
-&kp ESCAPE        &kp B            &kp L            &kp D              &kp C                &kp V      &kp J      &kp Y                 &kp O               &kp U             &kp PERIOD        &kp QUESTION
-&caps_word        &hml LEFT_GUI N  &hml LEFT_ALT R  &hml LEFT_SHIFT T  &hml LEFT_CONTROL S  &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &kp EXCLAMATION
-&sk LSHFT         &kp X            &kp Q            &kp M              &kp W                &kp Z      &kp COMMA  &kp DELETE            &kp K               &kp F             &kp APOSTROPHE    &kp SEMICOLON    &kp UP    &mo 6
-&kp C_PLAY_PAUSE  &lt 6 ESC        &sk LCTRL        &sk LEFT_GUI       &sk LEFT_ALT         &kp SPACE  &lt 4 TAB  &lt 5 TAB             &kp BACKSPACE       &lt 3 ENTER       &kp COMMA         &kp LEFT         &kp DOWN  &kp RIGHT
+&kp ESCAPE        &kp B            &kp L            &kp D              &kp C                   &kp V      &kp J      &kp Y                 &kp O               &kp U             &kp PERIOD        &kp QUESTION
+&caps_word        &hml LEFT_GUI N  &hml LEFT_ALT R  &hml LEFT_SHIFT T  &hml LEFT_CONTROL S     &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &kp EXCLAMATION
+&sk LSHFT         &kp X            &kp Q            &kp M              &kp W                   &kp Z      &kp COMMA  &kp DELETE            &kp K               &kp F             &kp APOSTROPHE    &kp SEMICOLON    &kp UP    &mo 6
+&kp C_PLAY_PAUSE  &lt 6 ESC        &sk LCTRL        &sk LEFT_GUI       &mt LEFT_CONTROL COMMA  &kp SPACE  &lt 4 TAB  &lt 5 TAB             &kp BACKSPACE       &lt 3 ENTER       &kp COMMA         &kp LEFT         &kp DOWN  &kp RIGHT
             >;
         };
 
