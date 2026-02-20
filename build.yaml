@@ -1,7 +1,7 @@
 include:
-  - board: nice_nano@2//zmk
+  - board: nice_nano@2
     shield: hillside52_left nice_view
-  - board: nice_nano@2//zmk
+  - board: nice_nano@2
     shield: hillside52_right nice_view
  
  # If you need to build hard reset firmware to flash in order to troubleshoot, uncomment below:
