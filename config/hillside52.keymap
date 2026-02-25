@@ -62,10 +62,60 @@
  */
 
             bindings = <
-&kp ESCAPE        &kp B            &kp L            &kp D              &kp C                   &kp V      &kp J      &kp Y                 &kp O               &kp U             &kp PERIOD        &kp QUESTION
-&caps_word        &hml LEFT_GUI N  &hml LEFT_ALT R  &hml LEFT_SHIFT T  &hml LEFT_CONTROL S     &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &kp EXCLAMATION
-&sk LSHFT         &kp X            &kp Q            &kp M              &kp W                   &kp Z      &kp COMMA  &kp DELETE            &kp K               &kp F             &kp APOSTROPHE    &kp SEMICOLON    &kp UP    &mo 6
-&kp C_PLAY_PAUSE  &lt 6 ESC        &sk LCTRL        &sk LEFT_GUI       &mt LEFT_CONTROL COMMA  &kp SPACE  &lt 3 TAB  &lt 4 COMMA           &kp BACKSPACE       &lt 5 ENTER       &sk RSHIFT        &kp LEFT         &kp DOWN  &kp RIGHT
+&lt 3 ESCAPE        &kp B                    &kp L                &kp D                     &kp C                   &kp V      &kp J      &kp Y                 &kp O               &kp U                    &kp PERIOD        &kp QUESTION
+&caps_word          &hml LEFT_GUI N          &hml LEFT_ALT R      &hml LEFT_SHIFT T         &hml LEFT_CONTROL S     &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E         &hmr RIGHT_GUI I  &kp EXCLAMATION
+&kp K_CONTEXT_MENU  &kp X                    &kp Q                &kp M                     &kp W                   &kp Z      &kp COMMA  &kp DELETE            &kp K               &kp F                    &kp APOSTROPHE    &kp SEMICOLON    &kp UP    &mo 3
+&kp C_PLAY_PAUSE    &mt LEFT_GUI C_PREVIOUS  &mt LEFT_ALT C_NEXT  &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL ENTER  &kp SPACE  &lt 1 TAB  &lt 2 COMMA           &kp BACKSPACE       &mt RIGHT_CONTROL ENTER  &mt RSHIFT SPACE  &kp LEFT         &kp DOWN  &kp RIGHT
+            >;
+        };
+
+        f_num_layer {
+            /* NUMPAD
+ * Left Hand: Math operators (+ - * / =)
+ * Right Hand: Numpad 1-9 on fingers, 0/Enter/. on thumbs
+ */
+
+            bindings = <
+&kp HOME  &kp PAGE_UP    &kp F7  &kp F8  &kp F9  &kp F12  &kp SLASH  &kp N7     &kp N8         &kp N9     &kp PERIOD  &kp BSPC
+&kp TAB   &kp N0         &kp F4  &kp F5  &kp F6  &kp F11  &kp ASTRK  &kp N4     &kp N5         &kp N6     &kp MINUS   &kp PLUS
+&kp END   &kp PAGE_DOWN  &kp F1  &kp F2  &kp F3  &kp F10  &trans     &kp SPACE  &kp CARET      &kp N1     &kp N2      &kp N3    &kp EQUAL  &trans
+&trans    &trans         &trans  &trans  &trans  &trans   &trans     &lt 3 N0   &kp BACKSPACE  &kp ENTER  &kp TAB     &trans    &trans     &trans
+            >;
+        };
+
+        sym_layer {
+            /* SYM
+ * Left Hand: Symbols (!@#$%), Brackets, Caps Word
+ * Right Hand: Symbols (^&*()), Vol Up/Dn, Home Row Mods (Shift, Ctrl, Alt, Gui)
+ */
+
+            bindings = <
+&kp INS    &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_SLEEP  &kp C_VOLUME_UP    &kp AMPS    &kp ASTRK    &kp LPAR         &kp RPAR     &kp DEL
+&kp GRAVE  &kp UNDERSCORE  &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp C_VOLUME_DOWN  &kp DOLLAR  &kp PERCENT  &kp CARET        &trans       &trans
+&kp PIPE   &kp MINUS       &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans       &kp LEFT_SHIFT     &trans      &kp C_MUTE   &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &trans  &trans
+&trans     &trans          &trans            &kp UNDERSCORE        &kp KP_SUBTRACT        &kp SPACE    &mo 3              &trans      &trans       &trans           &trans       &kp K_APP  &trans  &trans
+            >;
+        };
+
+        adj_layer {
+            /* ADJUST
+ * Includes toggles to jump between QWERTY, GRAPHITE, and STURDY.
+ */
+
+            bindings = <
+&to 0  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none           &none       &none             &ext_power EP_OFF  &ext_power EP_ON  &none
+&to 4  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none           &kp J       &kp C_PLAY_PAUSE  &kp L              &none             &bootloader
+&to 5  &kp C_SLEEP    &none          &none          &bootloader    &bootloader    &bt BT_CLR_ALL  &sys_reset  &bootloader       &kp F              &kp C_ASPECT      &kp C_CAPTIONS  &none  &none
+&none  &none          &none          &out OUT_TOG   &none          &bt BT_CLR     &none           &none       &none             &none              &none             &none           &none  &none
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+&kp N1  &kp G      &kp Q   &kp W      &kp E      &kp R      &trans    &trans  &trans  &trans  &trans  &trans
+&kp N2  &kp LSHFT  &kp A   &kp S      &kp D      &kp F      &trans    &trans  &trans  &trans  &trans  &trans
+&kp N3  &kp LCTRL  &kp Z   &kp X      &kp C      &kp V      &kp LALT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp N4  &kp N5     &kp N6  &kp LSHFT  &kp LCTRL  &kp SPACE  &kp TAB   &to 0   &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -80,65 +130,6 @@
 &trans  &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI   &kp ENTER
 &trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans  &trans  &kp N   &kp M   &kp COMMA  &kp DOT    &trans  &kp SLASH
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans
-            >;
-        };
-
-        gaming_layer {
-            bindings = <
-&kp N1  &kp G      &kp Q   &kp W      &kp E      &kp R      &trans    &trans  &trans  &trans  &trans  &trans
-&kp N2  &kp LSHFT  &kp A   &kp S      &kp D      &kp F      &trans    &trans  &trans  &trans  &trans  &trans
-&kp N3  &kp LCTRL  &kp Z   &kp X      &kp C      &kp V      &kp LALT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp N4  &kp N5     &kp N6  &kp LSHFT  &kp LCTRL  &kp SPACE  &kp TAB   &to 0   &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        num_layer {
-            /* NUMPAD
- * Left Hand: Math operators (+ - * / =)
- * Right Hand: Numpad 1-9 on fingers, 0/Enter/. on thumbs
- */
-
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp SLASH  &kp N7     &kp N8         &kp N9     &kp PERIOD    &kp BSPC
-&trans  &trans  &trans  &trans  &trans  &trans  &kp ASTRK  &kp N4     &kp N5         &kp N6     &kp MINUS     &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans  &kp EQUAL  &kp SPACE  &kp CARET      &kp N1     &kp N2        &kp N3    &kp EQUAL  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &lt 6 TAB  &kp BACKSPACE  &kp ENTER  &kp NUMBER_0  &trans    &trans     &trans
-            >;
-        };
-
-        sym_layer {
-            /* SYM
- * Left Hand: Symbols (!@#$%), Brackets, Caps Word
- * Right Hand: Symbols (^&*()), Vol Up/Dn, Home Row Mods (Shift, Ctrl, Alt, Gui)
- */
-
-            bindings = <
-&kp INS    &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none      &kp C_VOLUME_UP    &kp AMPS    &kp ASTRK    &kp LPAR         &kp RPAR     &kp DEL
-&kp GRAVE  &kp UNDERSCORE  &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &kp C_VOLUME_DOWN  &kp DOLLAR  &kp PERCENT  &kp CARET        &kp RGUI     &trans
-&kp PIPE   &kp MINUS       &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &none      &kp LEFT_SHIFT     &kp C_MUTE  &kp C_MUTE   &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &none     &trans
-&none      &none           &trans            &kp UNDERSCORE        &kp KP_SUBTRACT        &kp SPACE  &mo 6              &trans      &trans       &trans           &kp RCTRL    &kp K_APP  &sk RALT  &trans
-            >;
-        };
-
-        media_layer {
-            bindings = <
-&trans  &trans         &trans          &kp UP            &trans      &trans       &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &kp PAGE_DOWN  &kp LEFT        &kp DOWN          &kp RIGHT   &kp PAGE_UP  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp ENTER
-&trans  &trans         &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans       &trans  &trans  &trans  &kp F1  &kp F2   &kp F3     &trans  &trans
-&trans  &trans         &trans          &trans            &trans      &trans       &trans  &trans  &trans  &trans  &trans   &trans     &trans  &trans
-            >;
-        };
-
-        adj_layer {
-            /* ADJUST
- * Includes toggles to jump between QWERTY, GRAPHITE, and STURDY.
- */
-
-            bindings = <
-&to 0  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4   &none       &none  &none  &ext_power EP_OFF  &ext_power EP_ON  &none
-&to 1  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &none       &none  &none  &none              &none             &bootloader
-&to 2  &none          &none          &none          &bootloader    &sys_reset      &bt BT_CLR  &none  &none  &bootloader        &none             &none        &none  &to 7
-&none  &to 7          &none          &out OUT_TOG   &none          &bt BT_CLR_ALL  &none       &none  &none  &none              &none             &none        &none  &none
             >;
         };
     };
