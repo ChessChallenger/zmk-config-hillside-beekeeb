@@ -30,9 +30,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <175>;                // Repeat tap within 175ms to get the letter
-            require-prior-idle-ms = <200>;       // Prevents accidental mods while fast typing
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;                // Repeat tap within 175ms to get the letter
+            require-prior-idle-ms = <100>;       // Prevents accidental mods while fast typing
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 31 32 33 34 35 36 37 45 46 47 48 49 50 51>; // Right side + right thumbs
@@ -43,9 +43,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <200>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 38 39 40 41 42 43 44>; // Left side + left thumbs
