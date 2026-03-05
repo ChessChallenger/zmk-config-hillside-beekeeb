@@ -107,7 +107,7 @@
 &kp HOME  &kp PAGE_UP    &kp F7  &kp F8  &kp F9  &kp F12  &kp SLASH  &kp N7     &kp N8         &kp N9     &kp PERIOD  &kp BSPC
 &kp TAB   &kp N0         &kp F4  &kp F5  &kp F6  &kp F11  &kp ASTRK  &kp N4     &kp N5         &kp N6     &kp MINUS   &kp PLUS
 &kp END   &kp PAGE_DOWN  &kp F1  &kp F2  &kp F3  &kp F10  &trans     &kp SPACE  &kp CARET      &kp N1     &kp N2      &kp N3    &kp EQUAL  &trans
-&trans    &trans         &trans  &trans  &trans  &trans   &trans     &lt 3 N0   &kp BACKSPACE  &kp ENTER  &kp TAB     &trans    &trans     &trans
+&trans    &trans         &trans  &trans  &trans  &trans   &none      &lt 3 N0   &kp BACKSPACE  &kp ENTER  &kp TAB     &trans    &trans     &trans
             >;
         };
 
@@ -121,7 +121,7 @@
 &kp INS    &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_SLEEP  &kp C_VOLUME_UP    &kp AMPS    &kp ASTRK    &kp LPAR         &kp RPAR     &kp DEL
 &kp GRAVE  &kp UNDERSCORE  &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE    &kp C_VOLUME_DOWN  &kp DOLLAR  &kp PERCENT  &kp CARET        &trans       &trans
 &kp PIPE   &kp MINUS       &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans       &kp LEFT_SHIFT     &trans      &kp C_MUTE   &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &trans  &trans
-&trans     &trans          &trans            &kp UNDERSCORE        &kp KP_SUBTRACT        &kp SPACE    &mo 3              &trans      &trans       &trans           &trans       &kp K_APP  &trans  &trans
+&trans     &trans          &trans            &kp UNDERSCORE        &kp KP_SUBTRACT        &kp SPACE    &mo 3              &none       &trans       &trans           &trans       &kp K_APP  &trans  &trans
             >;
         };
 
