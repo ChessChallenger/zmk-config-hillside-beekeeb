@@ -83,10 +83,11 @@
         skq: skq {
             compatible = "zmk,behavior-sticky-key";
             label = "SK Quick release";
-            bindings = <&sk>;
+            bindings = <&kp>;
             #binding-cells = <1>;
             quick-release;
-            release-after-ms = <1000>;
+            release-after-ms = <2000>;
+            ignore-modifiers;
         };
     };
 
