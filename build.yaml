@@ -1,7 +1,7 @@
 include:
   - board: nice_nano@2//zmk
     shield: hillside52_left nice_view
-    # snippet: zmk-usb-logging
+    snippet: zmk-usb-logging
 # Uncomment above to enable usb logging
 
   - board: nice_nano@2//zmk
