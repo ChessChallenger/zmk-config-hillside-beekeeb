@@ -50,19 +50,17 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 38 39 40 41 42 43 44>; // Left side + left thumbs
             hold-trigger-on-release;
         };
+    };
 
-
-        };
-
-        skq: skq {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SK Quick release";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            quick-release;
-            release-after-ms = <2000>;
-            ignore-modifiers;
-        };
+    skq: skq {
+        compatible = "zmk,behavior-sticky-key";
+        label = "SK Quick release";
+        bindings = <&kp>;
+        #binding-cells = <1>;
+        quick-release;
+        release-after-ms = <2000>;
+        ignore-modifiers;
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -73,10 +71,10 @@
  */
 
             bindings = <
-&lt 3 ESCAPE      &kp B                    &kp L                &kp D               &kp C                   &kp V      &kp J      &kp Y                 &kp O                &kp U             &kp PERIOD        &kp QUESTION
-&caps_word        &hml LEFT_GUI N          &hml LEFT_ALT R      &hml LEFT_SHIFT T  &hml LEFT_CONTROL S     &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &kp EXCLAMATION
-&kp LEFT_GUI      &kp X                    &kp Q                &kp M               &kp W                   &kp Z      &kp COMMA  &kp DELETE            &kp K                &kp F             &kp APOSTROPHE    &kp SEMICOLON    &kp UP    &mo 3
-&kp C_PLAY_PAUSE  &mt LEFT_GUI C_PREVIOUS  &mt LEFT_ALT C_NEXT  &kp BACKSPACE       &mt LEFT_CONTROL ENTER  &kp SPACE  &lt 1 TAB  &lt 2 COMMA           &kp BACKSPACE        &skq RIGHT_SHIFT  &kp SPACE         &kp LEFT         &kp DOWN  &kp RIGHT
+&lt 3 ESCAPE      &kp B                    &kp L                &kp D              &kp C                   &kp V      &kp J      &kp Y                 &kp O               &kp U             &kp PERIOD        &kp QUESTION
+&kp TAB           &hml LEFT_GUI N          &hml LEFT_ALT R      &hml LEFT_SHIFT T  &hml LEFT_CONTROL S     &kp G      &kp P      &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &kp COMMA
+&caps_word        &kp X                    &kp Q                &kp M              &kp W                   &kp Z      &kp COMMA  &kp DELETE            &kp K               &kp F             &kp APOSTROPHE    &kp SEMICOLON  &kp UP    &lt 3 EXCL
+&kp C_PLAY_PAUSE  &mt LEFT_GUI C_PREVIOUS  &mt LEFT_ALT C_NEXT  &kp BACKSPACE      &mt LEFT_CONTROL ENTER  &kp SPACE  &mo 1      &mo 2                 &kp BACKSPACE       &skq RIGHT_SHIFT  &kp TAB           &kp LEFT       &kp DOWN  &kp RIGHT
             >;
         };
 
