@@ -106,6 +106,13 @@
 
             label = "PPQUIZD";
         };
+
+        PPQuiz_Prev: PPQuiz_Prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp SPACE>;
+            label = "PPQUIZ_PREV";
+        };
     };
 
     keymap {
@@ -159,7 +166,7 @@
             bindings = <
 &to 0  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none           &kp LESS_THAN  &kp GREATER_THAN  &none  &none         &none
 &to 4  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none           &kp J          &kp C_PLAY_PAUSE  &kp L  &none         &bootloader
-&to 5  &kp C_SLEEP    &none          &none          &bootloader    &bootloader    &bt BT_CLR_ALL  &sys_reset     &bootloader       &kp F  &kp C_ASPECT  &kp C_CAPTIONS  &none  &none
+&to 5  &to 0          &to 6          &to 4          &to 5          &bootloader    &bt BT_CLR_ALL  &sys_reset     &bootloader       &kp F  &kp C_ASPECT  &kp C_CAPTIONS  &none  &none
 &none  &none          &none          &out OUT_TOG   &none          &bt BT_CLR     &none           &none          &none             &none  &none         &none           &none  &none
             >;
         };
@@ -184,6 +191,15 @@
 &trans  &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI   &kp ENTER
 &trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans  &trans  &kp N   &kp M   &kp COMMA  &kp DOT    &trans  &kp SLASH
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans
+            >;
+        };
+
+        macro_layer {
+            bindings = <
+&trans   &trans    &trans    &trans        &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &PPQuizA  &PPQuizB  &PPQuizC      &PPQuizD  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans    &trans    &trans        &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans    &trans    &PPQuiz_Prev  &trans    &kp SPACE  &trans  &to 0   &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
