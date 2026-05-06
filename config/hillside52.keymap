@@ -62,6 +62,52 @@
         ignore-modifiers;
     };
 
+    macros {
+        PPQuizA: PPQuizA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp TAB &kp SPACE>,
+                <&macro_wait_time 100>,
+                <&kp TAB &kp TAB &kp SPACE>;
+
+            label = "PPQUIZA";
+        };
+
+        PPQuizB: PPQuizB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp TAB &kp DOWN &kp SPACE>,
+                <&macro_wait_time 100>,
+                <&kp TAB &kp TAB &kp SPACE>;
+
+            label = "PPQUIZB";
+        };
+
+        PPQuizC: PPQuizC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp TAB &kp DOWN &kp DOWN &kp SPACE>,
+                <&macro_wait_time 100>,
+                <&kp TAB &kp TAB &kp SPACE>;
+
+            label = "PPQUIZC";
+        };
+
+        PPQuizD: PPQuizD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp TAB &kp DOWN &kp DOWN &kp DOWN &kp SPACE>,
+                <&macro_wait_time 100>,
+                <&kp TAB &kp TAB &kp SPACE>;
+
+            label = "PPQUIZD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
