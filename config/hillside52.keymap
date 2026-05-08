@@ -68,7 +68,6 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB &kp SPACE>,
-                <&macro_wait_time 100>,
                 <&kp TAB &kp TAB &kp SPACE>;
 
             label = "PPQUIZA";
@@ -79,7 +78,6 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB &kp DOWN &kp SPACE>,
-                <&macro_wait_time 100>,
                 <&kp TAB &kp TAB &kp SPACE>;
 
             label = "PPQUIZB";
@@ -90,7 +88,6 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB &kp DOWN &kp DOWN &kp SPACE>,
-                <&macro_wait_time 100>,
                 <&kp TAB &kp TAB &kp SPACE>;
 
             label = "PPQUIZC";
@@ -101,7 +98,6 @@
             #binding-cells = <0>;
             bindings =
                 <&kp TAB &kp DOWN &kp DOWN &kp DOWN &kp SPACE>,
-                <&macro_wait_time 100>,
                 <&kp TAB &kp TAB &kp SPACE>;
 
             label = "PPQUIZD";
@@ -147,8 +143,6 @@
 
         sym_layer {
             /* SYM
- * Left Hand: Symbols (!@#$%), Brackets, Caps Word
- * Right Hand: Symbols (^&*()), Vol Up/Dn, Home Row Mods (Shift, Ctrl, Alt, Gui)
  */
 
             bindings = <
