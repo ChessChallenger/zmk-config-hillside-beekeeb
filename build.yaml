@@ -8,5 +8,5 @@ include:
     shield: hillside52_right nice_view_adapter nice_view
  
  # If you need to build hard reset firmware to flash in order to troubleshoot, uncomment below:
-  - board: nice_nano@2//zmk
-    shield: settings_reset
+  #- board: nice_nano@2//zmk
+  #  shield: settings_reset
